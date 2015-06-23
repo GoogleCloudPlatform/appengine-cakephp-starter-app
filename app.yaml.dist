@@ -1,0 +1,49 @@
+# Copyright 2015 Google Inc. All Rights Reserved.
+application: __APPLICATION_ID__
+version: 1
+runtime: php55
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /css
+  static_dir: webroot/css
+
+- url: /img
+  static_dir: webroot/img
+
+- url: /js
+  static_dir: webroot/js
+
+- url: /favicon\.ico
+  static_files: webroot/favicon.ico
+  upload: webroot/favicon.ico
+
+- url: /.*
+  script: index.php
+
+env_variables:
+  # Uncomment the following to enable debug mode.
+  CAKEPHP_DEBUG: '1'
+
+  # If connecting via TCP/IP to Google Cloud SQL
+  PROD_DB_HOSTNAME: "__PROD_DB_HOSTNAME__"
+  PROD_DB_PORT: "__PROD_DB_PORT__"
+
+  # If connecting via App Engine to Google Cloud SQL
+  PROD_DB_UNIXSOCKET: "__PROD_DB_SOCKET__"
+  PROD_DB_USERNAME: "__PROD_DB_USERNAME__"
+  PROD_DB_PASSWORD: "__PROD_DB_PASSWORD__"
+  PROD_DB_DATABASE: "__PROD_DB_DATABASE__"
+
+  # Change below to match your settings for local development.
+
+  # If connecting to MySQL using TCP/IP
+  DEV_DB_HOSTNAME: "__DEV_DB_HOSTNAME__"
+  DEV_DB_PORT: "__DEV_DB_PORT__"
+
+  # If connecting to MySQL using sockets.
+  DEV_DB_UNIXSOCKET: "__DEV_DB_SOCKET__"
+  DEV_DB_USERNAME: "__DEV_DB_USERNAME__"
+  DEV_DB_PASSWORD: "__DEV_DB_PASSWORD__"
+  DEV_DB_DATABASE: "__DEV_DB_DATABASE__"
