@@ -69,7 +69,7 @@ class Installer
       'application_id' => 'App Engine Application Id',
       'prod_db_hostname' => 'Production Database Hostname',
       'prod_db_port' => 'Production Database Port Number',
-      'prod_db_socket' => 'Production Database Socket Address (Format: /cloudsql/<project-id>/<instance-id>'),
+      'prod_db_socket' => 'Production Database Socket Address (Format: /cloudsql/<project-id>/<instance-id>)',
       'prod_db_username' => 'Production Database User Name',
       'prod_db_password' => 'Production Database Password',
       'prod_db_database' => 'Production Database Database Name',
